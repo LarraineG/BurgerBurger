@@ -1,0 +1,19 @@
+body {
+    background-color: yellow;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.burger-list {
+    min-height: 450px;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+}

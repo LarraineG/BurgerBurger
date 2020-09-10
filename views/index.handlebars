@@ -1,0 +1,53 @@
+<h1 class="text-center text-dark">Eat-Da-Burger</h1>
+
+<section >
+    <div class="d-md-flex justify-content-between burger-list">
+        <div class="mb-3">
+            <div class="card bg-dark m-2 p-3 h-100 shadow">
+                <h2>NOT YET DEVOURED</h2>
+                <ul class="list-group">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burger-block devoured=true}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="card bg-dark m-2 p-3 h-100 shadow">
+                <h2>DEVOURED</h2>
+                <ul class="list-group">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burger-block devoured=false}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="card bg-dark mx-2 mt-4 shadow">
+        <div class="card-body">
+            <h2 class="card-title">Build a Burger</h2>
+            <form class="create-form">
+
+                <div class="form-group">
+                    <label for="burg">Burger:</label>
+                    <input class="form-control" type="text" id="burg" name="name">
+                </div>
+
+                <div class="custom-control custom-radio">
+                    <label for="devoured">When would you like your burger?</label><br>
+                    <input type="radio" name="devoured" value="1"> NOW!<br>
+                    <input type="radio" name="devoured" value="0" checked> Later
+                </div>
+
+                <button type="submit" class="btn btn-success mt-3 mx-2">Build Burger</button>
+            </form>
+        </div>
+    </div>
+</section>
